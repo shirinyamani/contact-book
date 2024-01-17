@@ -5,6 +5,9 @@ class Contactbook:
         self.contact = collections.defaultdict(dict) #name:contact
 
     def read(self):
+        """
+        This method will print all the contacts in the contact book
+        """
         for name, info in self.contact.items():
             print(f'name: {name}')
             print(f'phone: {info["phone"]}')
@@ -22,6 +25,9 @@ class Contactbook:
         
 
     def update(self, name, phone=None, email=None):
+        """
+        This method will update the contact
+        """
         if name in self.contact:
             if phone:
                 self.contact[name]['phone'] = phone
